@@ -1,0 +1,49 @@
+{
+"users":[
+  {
+    "reqId": "1",
+    "role": "Web Developer",
+    "designation": "SE",
+    "experience": "3-4",
+    "technology": [
+      "html, ",
+      "css, ",
+      "reactJs"
+    ]
+  },
+  {
+    "reqId": "2",
+    "role": "Web Developer",
+    "designation": "SE",
+    "experience": "3-4",
+    "technology": [
+      "html, ",
+      "css, ",
+      "angular, "
+    ]
+  },
+  {
+    "reqId": "3",
+    "role": "Full Stack Developer",
+    "designation": "SSE",
+    "experience": "5-7",
+    "technology": [
+      "html, ",
+      "css, ",
+      "reactJs, ",
+      "node"
+    ]
+  },
+  {
+    "reqId": "4",
+    "role": "Backend Developer",
+    "designation": "SE",
+    "experience": "3-4",
+    "technology": [
+      "html, ",
+      "css, ",
+      ".Net, "
+    ]
+  }
+]
+}

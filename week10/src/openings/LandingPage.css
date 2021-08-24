@@ -1,0 +1,11 @@
+.headingBox{
+    width: 90%;
+    margin:20px;
+    background-color:#4472C4;
+    border: 2px solid #345792;
+    border-radius: 10px;
+    color:white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium',  Arial, sans-serif;
+    font-size: 12px;
+}

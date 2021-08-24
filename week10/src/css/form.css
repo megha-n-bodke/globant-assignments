@@ -1,0 +1,62 @@
+.form-container{
+    width: 600px;
+    padding : 10px;
+    margin :40px;
+    border :none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.font{
+    color:#B0B0B0;
+}
+
+.font-size{
+    font-size : 20px;
+
+}
+
+.margin{
+    margin-bottom: 20px;
+}
+
+.borders{
+    border-bottom:2px solid lightgray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+.errors{
+    color:red;
+}
+
+.rightMargin{
+    margin-right: 20px;
+}
+
+.emailContainer{
+    width : 92%
+}
+
+.formButton{
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.submitBtn{
+    background-color:#3F51B5;
+    width: 110px;
+    color: white;
+}
+
+.resetBtn{
+    width:100px;
+    color: gray;
+}
+.rightMarginChk{
+    margin-right: 10px;
+}
