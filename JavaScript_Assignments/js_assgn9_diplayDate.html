@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Date</title>
+</head>
+<script>
+  function showTodayDate()
+  {
+    var today = new Date();
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    document.getElementById("dt").innerHTML = today.toString();
+    var day = today.getDay();
+    //alert(day);
+    document.getElementById("day").innerHTML = "Today is "+day;
+    document.getElementById("month").innerHTML = "This month is: "+ today.getMonth();
+    document.getElementById("year").innerHTML = "Running year is: "+ today.getFullYear();
+
+
+
+  }
+</script>
+
+<style>
+  h2{
+      color:cadetblue;
+     text-align: left;
+  }
+  #btn{
+    background-color: #73798A;
+    height:50px;
+    width:170px;
+    border-radius: 10px;
+    outline: none;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    margin-left: 20px;
+  }
+
+p{
+    text-align:left;
+    color:cadetblue;
+}
+</style>
+<body>
+<h2>Click Button To check today's date</h2>
+<button id="btn" onclick="showTodayDate()">Show Todays Date</button>
+<p id="dt"></p>
+<p id="day"></p>
+<p id="month"></p>
+<p id="year"></p>
+
+
+</body>
+</html>

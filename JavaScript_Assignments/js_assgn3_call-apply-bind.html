@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call apply bind</title>
+</head>
+<script>
+
+  //part 1
+  const object = {
+    message: 'Welcome to Globant'
+  };
+
+  function logMessage() {
+    console.log(this.message); // "Welcome to Globant"
+  }
+  //let obj2;
+  //answer---
+  logMessage.call(object);
+
+  //part 2*****
+  const object1 = {
+    message: 'Welcome to Globant',
+
+    logMessage() {
+      console.log(this.message); // What is logged?
+    }
+  };
+  //Answer----
+    logMessage.call(object1);
+    setTimeout(object.logMessage, 1000);
+
+</script>
+<body>
+
+</body>
+</html>

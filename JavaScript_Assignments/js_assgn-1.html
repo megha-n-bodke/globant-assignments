@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week3_Assign1</title>
+    <script>
+        var n;
+        n=window.prompt("Enter HotDog quantity");
+        function saleHotDogs(n)
+        {
+            var bill;
+            switch(n){
+                case(n<5? n:null) :
+                    bill = n * 100;
+                    alert ("Your total bill is"+" "+ bill);
+                    break;
+                case (n>5 && n<10? n: null):
+                    bill = n * 95;
+                    alert ("Your total bill is"+" "+ bill);
+                    break;
+                case (n>=10? n: null):
+                    bill = n * 90;
+                    alert ("Your total bill is"+" "+ bill);
+                    break;
+                default:
+                    alert("Enter valid input");
+            }
+        }
+        saleHotDogs(parseInt(n));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

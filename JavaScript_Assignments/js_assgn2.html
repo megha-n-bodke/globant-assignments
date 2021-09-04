@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week3 assignment 2</title>
+  <script>
+      let numbers = [];
+      let count = 0;
+      function addElements(){
+
+          let value = document.getElementById("numArray").value;
+          numbers.push(value);
+            count ++;
+            document.getElementById("numArray").focus();
+            if(count > 3)
+            {
+                alert("Enter only 10 numbers");
+            }
+
+      }
+
+      function oddEveCount(numbers) {
+
+
+          var evenNumbers = numbers.filter(number => number % 2 == 0);
+
+          document.write("Even numbers " + evenNumbers);
+
+          var oddNumbers = numbers.filter(number => number % 2 !== 0);
+
+          document.write("Odd numbers " + oddNumbers);
+      }
+
+      groupNumbers();
+
+  </script>
+
+      <style>
+          .form{
+              display:flex;
+              flex-direction: column;
+              background-color: #96B2CD;
+              height:300px;
+              width:300px;
+              margin: 50px;
+              padding: 30px;
+              align-items:self-start;
+          }
+          .btn{
+              background-color: #73798A;
+              height:50px;
+              width:170px;
+              border-radius: 10px;
+              outline: none;
+              color:white;
+              font-size: 15px;
+              font-weight:bold;
+              margin-left: 50px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+          }
+
+          #add{
+              background-color: bisque;
+              color:black;
+              width:150px;
+              height:40px;
+              margin-left: 50px;
+              margin-top: 20px;
+
+          }
+          #numArray
+          {
+              margin-top: 20px;
+              margin-left: 50px;
+              height:30px;
+
+          }
+
+
+      </style>
+</head>
+<body>
+<div class="form">
+<input type="text" id="numArray" placeholder="Enter numbers">
+<button id = "add" onclick="addElements();">Add</button>
+<button class="btn" id="eve" onclick="oddEveCount();">odd/Even Numbers</button>
+<span id="evn"></span>
+</div>
+</body>
+</html>

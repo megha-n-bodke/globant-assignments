@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoisting</title>
+</head>
+<script>
+    var someText = 'I am awesome text';
+    (function () {
+        console.log('Original value was: ' + someText);
+        var someText = I am super awesome text;
+        console.log('New value is: ' + someText);
+    })();
+    /* Answer For a)
+    --- it will give "Uncaught SyntaxError: Unexpected identifier"
+    Value assigned to someText is not enclose in double quotes.*/
+//corrected code for answer a)
+         var someText = 'I am awesome text';
+    (function () {
+        console.log('Original value was: ' + someText);
+        var someText = "I am super awesome text";
+        console.log('New value is: ' + someText);
+    })();
+
+    
+   var a = 1;
+  function b() {
+    a = 10;
+    //console.log(a);
+    return;
+
+    function a() {}
+  }
+  b();
+  console.log(a);
+
+  /* Answer For b)
+  ---It will print 1 as var 'a' is in global scope and
+  inside function 'a' value is not accessed only value is assign and
+  it is not available in "Global Scope",as it is only available in "function scope"
+   */
+
+ /* function foo() {
+      function bar() {
+          return 10;
+      } return bar();
+      function bar() {
+          return 18;
+      }
+  }
+  alert(foo());
+*/
+
+  // alert(foo());
+ // alert(foo());
+
+  function foo() {
+      var bar = function () {
+          return 13;
+      };
+      return bar();
+      var bar = function () {
+           return 18;
+       }     //return bar();
+
+  }
+    /* answer for d) it will print 13 --as we are invoking bar() of 13 so it gets hoisted */
+
+</script>
+<body>
+
+</body>
+</html>

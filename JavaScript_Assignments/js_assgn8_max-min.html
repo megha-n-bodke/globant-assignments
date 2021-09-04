@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>High and Low numbers</title>
+</head>
+<script>
+
+    var inputArray = [];
+    var size = 5; //Maximum Array size
+
+    for(var i=0; i<size; i++) {
+
+        //Taking Input from user
+        inputArray[i] = prompt('Enter Element ' + (i+1));
+    }
+        var High =   Math.max.apply(null, inputArray);
+        var Low =   Math.min.apply(null, inputArray);
+
+    //Math.max(inputArray);
+    document.write("Max is" + High);
+    document.write("\n");
+
+    document.write("Min is" + Low);
+
+        //Print the array in the console.
+    //console.log(inputArray);
+</script>
+<body>
+
+</body>
+</html>

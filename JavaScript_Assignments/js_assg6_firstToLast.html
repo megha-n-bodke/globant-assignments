@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count occurence of character</title>
+  <script>
+      var str = prompt("enteing str");
+      var ch = prompt ("enter character");
+    var count = 0;
+    function firstToLast(str , ch){
+      for(var i=0; i<=str.length-1; i++)
+      {
+        if(str[i]==ch)
+        {
+          count++;
+        }
+      }
+      count = count-1;
+      if(count>1)
+      {
+        return count;
+      }
+      else if(count == 1)
+      {
+        return 0;
+      }
+      else{
+          return -1;
+      }
+    }
+    firstToLast(str, ch);
+    document.write(count);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LetterChange</title>
+</head>
+<script>
+    var txt = prompt("Please enter some text: ");
+    var newTxt = "";
+
+    let str = txt.replace(/[a-z]/gi, function(char) {
+        char = String.fromCharCode(char.charCodeAt(0)+1);
+        if (char=='{' || char=='[') char = 'a';
+        if (/[aeiuo]/.test(char)) char = char.toUpperCase();
+        return char;
+    });
+
+    document.write(str);
+</script>
+<body>
+
+</body>
+</html>

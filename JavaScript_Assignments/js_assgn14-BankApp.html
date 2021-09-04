@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+        var savingAccount = function () {
+        var balance = 0;
+
+        function deposit(amount) {
+            if (amount < 0) {
+                console.log("Invalid amount");
+            }
+            balance += amount;
+            console.log("Depositing "+ amount);
+            //return balance;
+            console.log("Successfully deposited "+ amount + " new balance is "+ balance + ".");
+        }
+
+
+        function withdraw(amount) {
+            if (balance < amount) {
+                console.log("Insufficient balance");
+            } else {
+                console.log("Withdrawing "+ amount);
+                balance -= amount;
+            }
+            //return balance;
+            console.log("Successfully withdrawn "+ amount + " new balance is "+ balance + ".");
+        }
+
+        function getbalance()
+        {
+            return balance;
+        }
+
+        return {
+            withdraw: withdraw,
+            deposit: deposit,
+            getbalance: getbalance,
+        }
+    }
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

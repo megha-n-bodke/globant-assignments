@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date Difference</title>
+</head>
+<script src = "lib/moment/moment.min.js">
+</script>
+<script>
+
+  var date1 = moment(prompt("Enter start date"),'DD-MM-YYYY');
+  var date2 = moment(prompt("Enter end  date"),'DD-MM-YYYY');
+  
+
+  var years = date1.diff(date2, 'years');
+  var months = date1.diff(date2, 'months');
+  var days = date1.diff(date2, 'days');
+
+  document.write(`Difference in Dates is..years:${years} months:${months} days:${days}` );
+
+
+  //document.write("Difference in year...."+date2.diff(date1, 'years','days',));
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

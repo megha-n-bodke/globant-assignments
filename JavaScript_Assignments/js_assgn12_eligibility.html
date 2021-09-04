@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eligibility Criteria for vaccine</title>
+</head>
+<script>
+  var DOB = new Date(prompt("Enter your Date Of Birth"));
+  var today = new Date();
+  var birth_year = DOB.getFullYear();
+  var current_year = today.getFullYear();
+  //document.write(birth_year);
+  var age = birth_year - current_year;
+  //document.write("Your age is" + age);
+
+  if(age>=60)
+  {
+      document.write("You are eligible for vaccination. Try to contact nearest hospital.");
+  }
+  if(age>=45 & age<60)
+  {
+      document.write("Vaccination will start from 1st June");
+  }
+  if(age>=18 & age<45)
+  {
+      document.write("Increase your immunity by Yoga & Pranayam. Eat healthy.. Stay Healthy");
+  }
+  if(age < 18)
+  {
+      document.write("Stay Home...Stay Safe");
+  }
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

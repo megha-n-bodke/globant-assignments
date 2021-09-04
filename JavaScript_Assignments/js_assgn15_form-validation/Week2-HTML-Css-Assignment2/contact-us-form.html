@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact-us-form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        //text uppercase
+        function toUp()
+        {
+            var text = document.getElementById("nm");
+            text.value = text.value.toUpperCase();
+        }
+
+        //email validation
+        function mailValid() {
+            var email = document.getElementById("em").value;
+            //alert(email);
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            if (email.match(validRegex)) {
+
+                alert("Valid email address!");
+
+
+            } else {
+
+                document.getElementById("err_msg").innerHTML = "Invalid email address";
+
+            }
+        }
+
+        //phone number validation
+        function validPhone() {
+            var phone = document.getElementById("ph").value;
+            alert(phone);
+           var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (phone.match(phoneNum))
+            {
+                document.getElementById("sub").focus();
+
+            }
+            else
+
+            {
+                document.getElementById("err_phn").innerHTML = "Invalid phone number";
+
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+<div class="container bg-danger">
+    <div class="fom-container">
+        <p id="heading">contact us form</p>
+        <div class="row left">
+            <div class="col-md-6 c-fields left">
+                    <input type="text" id="nm" placeholder="Name" class="borders" onblur="toUp();">
+
+                    <input type="text" id="em" placeholder="Email Address" class="borders" onblur="mailValid();">
+                    <span id="err_msg" style="color: red"></span>
+
+                    <input type="text" id="ph" placeholder="Phone" class="borders" onblur="validPhone();">
+                    <span id="err_phn" style="color: red"></span>
+
+
+                <input type="text" id = "sub" placeholder="Subject" class="borders">
+
+            </div>
+
+            <div class="col-md-6 right">
+                <textarea placeholder="Message" id="txtmsg" class="borders" rows="8" cols="25">
+
+                </textarea>
+                <div>
+                    <button id="btn">Send</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

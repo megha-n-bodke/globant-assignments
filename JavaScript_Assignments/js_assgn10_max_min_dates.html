@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max And Min Date</title>
+    <script src = "lib/moment/moment.min.js">
+    </script>
+    <script>
+        var inputArray = [];
+        var size = 5; //Maximum Array size
+
+        for (var i = 0; i < size; i++) {
+            inputArray.push(new Date(prompt("enter dates")));
+        }
+
+        const maxDate = new Date(Math.max(...inputArray));
+        document.writeln(`Max date from entered dates is...${maxDate}   `);
+        let minDate =new Date(Math.min(...inputArray));
+        document.writeln(`Min date from entered dates is....${minDate}`);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
