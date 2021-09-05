@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  const person={
+    name:{
+      first:"megha",
+      last:"bodke",
+    },
+    age:33,
+
+    intro(){
+      console.log(this.name.first+"  "+person.name.last+ "is "+ this.age +"old");
+  }
+
+  };
+  let myDataName = "height";
+  let myDataValue = "5.3";
+person['myDataName']=myDataValue;
+
+  let cat = {
+      name : 'Bertie',
+      breed : 'Cymric',
+      color : 'white',
+      greeting: function() {
+          console.log('Meow!');
+      }
+  }
+
+  // Put your code here
+  cat['name']="pinky";
+  cat.greeting();
+  cat.color = "black";
+
+  let bandInfo={};
+
+  // Put your code here
+  bandInfo = {
+      name : 'shankar-ehsaan-loy',
+          nationality :'Indian',
+          albums : {
+          name:'hum',
+              released :2010
+
+      }
+
+  }
+
+
+  let cat2 ={
+      name:'chimu',
+      color:'brown',
+      breed:'indian',
+      greeting:function(){
+          console.log('meow');
+      }
+  }
+</script>
+</html>

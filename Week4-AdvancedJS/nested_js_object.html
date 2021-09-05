@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        tr{
+            text-align: left;
+            color: #C3445D;
+        }
+    </style>
+  <script>
+    function displaytable() {
+      var employee = [{
+        no: 1,
+        "name": "abc",
+        "gender": "male",
+          "email":"abc@gmail.com"
+      },
+        {
+          no: 2,
+          "name": "pqr",
+          "gender": "female",
+            "email":"pqr@gmail.com"
+        }
+      ];
+      var button = document.createElement("");
+
+      /* for(var x in employee)
+    {
+      document.write(employee[x].name);
+
+    }*/
+      // var html = "<table border='1|1'>";
+      var k = '<tbody>'
+      for (var i = 0; i <= employee.length; i++) {
+        k += '<tr>';
+        k += '<td>' + employee[i].no + '</td>';
+        k += '<td>' + employee[i].name + '</td>';
+        k += '<td>' + employee[i].gender + '</td>';
+        k += '<td>' + employee[i].email + '</td>';
+        k += '<td>' + + '</td>';
+
+          //k += `<td>${document.createElement(<button>-</button>)}</td>`;
+          k += '</tr>';
+      }
+      k += '</tbody>';
+      document.getElementById('tableData').innerHTML = k;
+    }
+
+  </script>
+</head>
+<body onload="displaytable();">
+    <table id = "table" cellpadding="2" cellspacing="2"  bgcolor=white width="40%" >
+      <thead>
+      <tr>
+        <th width="12%">no</th>
+        <th width="12%">Name</th>
+        <th width="12%">Gender</th>
+          <th width="12%">email</th>
+          <th width="12%">remove/Add</th>
+
+
+      </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+    </table>
+
+    </table>
+</body>
+</html>

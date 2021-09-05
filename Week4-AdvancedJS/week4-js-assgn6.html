@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multiplyNumber(object)</title>
+  <script>
+
+    function multiplyNumber(obj) {
+        //document.write("in function......");
+        for (const prop in obj) {
+            if( prop == 'title')
+            {
+                document.write (`obj.${prop} = ${obj[prop]}`);
+               // prop : obj[prop];
+            }
+            else {
+                document.write(`${prop} = ${obj[prop] * 2}`);
+           }
+        }
+        return obj;
+    }
+        /* for (x in obj ) {
+             if (obj[x] == "title") {
+                 res = "Short Table";
+             } else {
+                 res = obj[x] * 2;
+
+             }
+
+
+         }
+   */
+    //calling multiplyNumber
+        let shortTable = {
+            width: 200,
+            height: 300,
+            title: "Short Table"
+        };
+
+    //calling multiplyNumber
+        const obj = multiplyNumber(shortTable);
+
+    for (const prop in obj) {
+        console.log(`obj.${prop} = ${obj[prop]}`);
+    }
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

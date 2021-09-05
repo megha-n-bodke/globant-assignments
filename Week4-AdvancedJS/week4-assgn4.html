@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Object</title>
+</head>
+<script>
+    var Job = {
+        Name : "",
+        Salary :"",
+        Duration :2,
+        Specifications:"",
+        Criteria : ""
+    };
+
+    var newJob =Job;
+    document.write("Keys of the newJob object---");
+    document.write("<br>");
+    document.write("<br>");
+
+    for (var x in newJob)
+    {
+        //document.write(x);
+        document.write(`newJob.${x}`);
+        document.write("<br>");
+        document.write("<br>");
+
+
+    }
+
+</script>
+<body>
+
+</body>
+</html>

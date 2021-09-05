@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep Copy Object</title>
+</head>
+<script>
+  nestedObj = {
+    name: 'Jhon',
+    address: {
+      city: 'xyz',
+      pincode : '123456',
+      phoneNumber: {
+        home: 9998887776,
+        work: {
+          office1: 9922334455,
+          office2: 9922334466,
+        }
+      }
+    }
+  }
+
+  const copy = JSON.parse(JSON.stringify(nestedObj));
+  console.log(copy);
+
+  nestedObj.name = "abc";
+  console.log(nestedObj.name);
+  console.log(copy.name);
+
+</script>
+<body>
+
+</body>
+</html>

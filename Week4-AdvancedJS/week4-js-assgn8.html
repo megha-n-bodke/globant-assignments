@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<style>
+    th , td{
+        padding: 20px;
+        margin: 20px;
+    }
+</style>
+<script>
+ var employee = [
+     {no:1 ,name : "abc" ,gender : "male" ,email:"abc@gmail.com",op:"-"},
+     { no:2, name : "pqr" ,gender : "female" ,email:"pqr@gmail.com",op:"+" },
+ ];
+
+window.addEventListener('load',display);
+
+function display()
+{
+    let headers = ["no", "name", "email", "gender", "add/rem"];
+
+    //document.write("event listner attached");
+    for (var i=0 ; i< employee.length; i++){
+        document.write(employee[i].name);
+        document.write(employee[i].gender);
+        document.write(employee[i].email);
+    }
+
+    let table = document.createElement("table");
+    let headrow = document.createElement("tr");
+
+    headers.forEach(htext =>{
+        let header = document.createElement("th");
+        let txtnode = document.createTextNode(htext);
+        header.appendChild(txtnode);
+        headrow.appendChild(header);
+    });
+    table.appendChild(headrow);
+
+    employee.forEach(emp =>{
+        let row = document.createElement("tr");
+
+        Object.values(emp).forEach(text=>{
+            let cell = document.createElement("td");
+            let textnode = document.createTextNode(text);
+            cell.appendChild(textnode);
+            row.appendChild(cell);
+        });
+        table.appendChild(row);
+    })
+    document.body.appendChild(table);
+    //table.setAttribute("margin", "20px");
+
+
+
+    document.addEventListener('click', function(e){
+
+            //let val= (e.currentTarget)
+        const data = e.target;
+        //let val =valueOf(data.toLocaleString());
+        alert (data);
+    });
+}
+
+</script>
+<body onload="display();">
+<button id = "btn">click</button>
+</body>
+</html>

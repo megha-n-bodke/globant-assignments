@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Total Salary</title>
+  <script>
+      let sum ;
+      function grossSalary(obj)
+    {
+      let x;
+      sum=0;
+      for(x in obj)
+      {
+        sum += parseFloat( obj[x] );
+      }
+        return sum;
+      }
+
+    let salaries = {
+      Sara: 100,
+      Anna: 160,
+      Nora: 130
+    }
+    sum = grossSalary(salaries);
+      document.write("All emplyee salary sum is  "+sum + ".");
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
