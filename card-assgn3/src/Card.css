@@ -1,0 +1,60 @@
+.listcontainer{
+
+    width: auto;
+    height:auto;
+    border: 15px black;
+    color:black;
+    margin-left: 50px;
+   
+} 
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-weight: bold;
+
+}
+
+.inputfields{
+    margin-bottom :20px;
+    height: 25px;
+    width: 250px;
+    font-size: 20px;
+}
+input[type=radio] {
+    padding-top: 5px;
+    width :20px;
+    height: 2em;
+}
+.check{
+    font-size: 25px;
+}
+.imagecontainer
+{
+    position: relative;
+    width: 180px;
+    height:200px;
+    border :  black;
+    padding-bottom: 10px;
+    padding-top: 20px;
+
+}
+.username{
+    position: absolute;
+    font-size: 25px;
+    top:190px;
+    left : 5px;
+    bottom: 1px;
+}
+.button{
+    height: 35px;
+    width : 130px;
+    font-size: 20px;
+    text-align: justify;
+    border : 3px solid blue;
+    border-radius: 4px;
+
+}
+
